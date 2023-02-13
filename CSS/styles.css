@@ -313,16 +313,21 @@ transition-timing-function: var(--cubik-time);    }
 .modal-point {
     display: block;
     text-align: left;
-    gap: 0 8px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(16/12);
+    letter-spacing: 0.04em;
+    color: #8E8F99;
 }
 
 .modal-input-icon {
     
     position: absolute;
-    width: 18px;
-    height: 24px;
     left: 16px;
-    transform: translateY(50%);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: var(--cubik-time);
@@ -342,14 +347,6 @@ outline: none;
 .inform-container {
     position: relative;
     margin-bottom: 8px;
-}
-
-.label-name {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(16/12);
-    letter-spacing: 0.04em;
-    color: #8E8F99;
 }
 
 .form-text {
@@ -402,8 +399,7 @@ outline: none;
 .checkbox:checked + .privacy-policy::before {
     background-color: var(--pressed-state);
     background-image: url(../images/checkbox.svg);
-    width: 16px;
-    height: 16px;
+    background-size: cover;
 }
 
 .visually-hidden {
@@ -421,7 +417,6 @@ border: 0;
     background-color: var(--button-color);
     width: 169px;
     height: 56px;
-    margin-bottom: 24px;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(24/16);
@@ -723,6 +718,7 @@ padding-bottom: 120px;
 
     .mail-footer {
         height: 40px;
+        width: 264px;
         background-color: var(--footer-bgcolor);
         background-origin: content-box;
         border: 1px solid rgba(255, 255, 255, 0.3);
